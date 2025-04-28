@@ -1,0 +1,28 @@
+<!-- DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration 
+    DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd"  -->
+
+<hibernate-configuration> <!-- Hibernate configuration wrapper -->
+    <session-factory> <!-- Session factory for Hibernate -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>  <!-- Specifies MySQL JDBC driver -->
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/Hospital_Management_System</property> <!-- Connection URL to the Hospital_Management_System database on local machine -->
+        <property name="hibernate.connection.username">root</property> <!-- Database username -->
+        <property name="hibernate.connection.password">security</property> <!-- Database password -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property> <!-- Dialect for MySQL 8 -->
+        <property name="hibernate.hbm2ddl.auto">update</property> <!-- Automatically update the database schema -->
+        <property name="hibernate.show_sql">false</property> <!-- Disable printing SQL queries to the console -->
+        <property name="hibernate.format_sql">true</property> <!-- Formats SQL queries for better readability -->
+        <property name="hibernate.id.new_generator_mappings">true</property> <!-- Enables new ID generator mappings -->
+
+        <!-- Mappings for the Hibernate entities -->
+        <mapping class="com.Hospital_Management_System.Entity.Patient"/>
+        <mapping class="com.Hospital_Management_System.Entity.Employee"/>
+        <mapping class="com.Hospital_Management_System.Entity.Doctor"/>
+        <mapping class="com.Hospital_Management_System.Entity.Nurse"/>
+        <mapping class="com.Hospital_Management_System.Entity.Room"/>
+        <mapping class="com.Hospital_Management_System.Entity.Receptionist"/>
+        <mapping class="com.Hospital_Management_System.Entity.TestReport"/>
+        <mapping class="com.Hospital_Management_System.Entity.Bill"/>
+        <mapping class="com.Hospital_Management_System.Entity.Record"/>
+
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.hospital</groupId> <!-- Defines the group ID for the project -->
+    <artifactId>hospitalmanagementsystem</artifactId> <!-- Defines the artifact ID for the project -->
+    <version>0.0.1-SNAPSHOT</version> <!-- Defines the version of the project -->
+    <packaging>jar</packaging> <!-- Specifies the packaging type as JAR -->
+
+    <name>hospitalmanagementsystem</name> <!-- Specifies the name of the project -->
+    <url>http://maven.apache.org</url> <!-- Provides the URL of the project -->
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- Specifies the source encoding -->
+        <maven.compiler.source>1.8</maven.compiler.source> <!-- Specifies the source Java version -->
+        <maven.compiler.target>1.8</maven.compiler.target> <!-- Specifies the target Java version -->
+    </properties>
+
+ <dependencies>
+        <dependency>
+         <!-- Allows your Java app to connect to a MySQL database. -->
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId> <!-- MySQL JDBC driver -->
+            <version>8.0.30</version> <!-- Version of the MySQL connector -->
+        </dependency>
+       
+        <dependency>
+           <!-- Provides ORM (Object Relational Mapping) features for managing database tables using Java classes. -->
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-core</artifactId> <!-- Hibernate ORM core library -->
+            <version>5.6.15.Final</version> <!-- Version of Hibernate core -->
+        </dependency>
+        
+        <dependency>
+            <!-- Used for unit testing your code. -->
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId> <!-- JUnit testing framework -->
+            <version>3.8.1</version> <!-- Version of JUnit -->
+            <scope>test</scope> <!-- Scope of dependency is limited to testing -->
+        </dependency>
+        
+       <dependency>
+            <!-- A fast connection pool for managing database connections efficiently. -->
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId> <!-- HikariCP connection pool library -->
+            <version>5.0.1</version> <!-- Version of HikariCP -->
+       </dependency>
+</dependencies>
+</project>
